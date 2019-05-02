@@ -43,10 +43,10 @@ let logo = document.getElementById("logo-img");
 
 // Images set
 const ctaImg = document.getElementById('cta-img');
-    ctaImg.setAttribute('src', siteContent['cta']['img-src'])
+    ctaImg.src= siteContent['cta']['img-src'];
 
 const midImg = document.getElementById('middle-img');
-    midImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+    midImg.src= siteContent['main-content']['middle-img-src'];
 
 // set h1 within CTA
 const firstHOne = document.querySelector('h1');
@@ -59,20 +59,21 @@ const topBtn = document.querySelector('button');
     // console.log(topBtn);
 
 // nav items
-const navItems = document.getElementsByTagName('a');
+const navItems = document.querySelectorAll('a');
     console.log(navItems);
-// siteContent.forEach(nav => {
-//   const navList = document.createElement('a');
-//   document.body.append(navList);
-// });
-// console.log(navList);
+navItems.forEach(nav => {
+    nav.textContent = siteContent['nav']['nav-item-1'];
+    });
 
 
-// main content paragraphs
-adfadadf
+// main content p's
+const mainText = document.querySelector('features-content');
+    mainText.forEach(pTag => {
+      pTag.textContent = siteContent['main-content']['features-content'];
+    });
 
 // contact info
 
 // footer
-const ftr = document.getElementsByTagName('footer');
+const ftr = document.querySelector('footer');
     ftr.textContent = siteContent['footer']['copyright'];
