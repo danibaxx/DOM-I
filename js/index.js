@@ -39,4 +39,40 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+    logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Images set
+const ctaImg = document.getElementById('cta-img');
+    ctaImg.setAttribute('src', siteContent['cta']['img-src'])
+
+const midImg = document.getElementById('middle-img');
+    midImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+// set h1 within CTA
+const firstHOne = document.querySelector('h1');
+    firstHOne.textContent = siteContent['cta']['h1'];
+    // console.log(firstHOne);
+
+// button in CTA
+const topBtn = document.querySelector('button');
+    topBtn.textContent = siteContent['cta']['button'];
+    // console.log(topBtn);
+
+// nav items
+const navItems = document.getElementsByTagName('a');
+    console.log(navItems);
+// siteContent.forEach(nav => {
+//   const navList = document.createElement('a');
+//   document.body.append(navList);
+// });
+// console.log(navList);
+
+
+// main content paragraphs
+adfadadf
+
+// contact info
+
+// footer
+const ftr = document.getElementsByTagName('footer');
+    ftr.textContent = siteContent['footer']['copyright'];
