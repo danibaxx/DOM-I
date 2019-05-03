@@ -62,7 +62,7 @@ const topBtn = document.querySelector('button');
 const navItems = document.querySelectorAll('a');
     console.log(navItems);
 navItems.forEach(nav => {
-    nav.textContent = siteContent['nav']['nav-item-1'];
+    nav.textContent = siteContent['nav']['nav-item-${index + 1}'];
     });
 
 
