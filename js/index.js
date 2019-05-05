@@ -60,10 +60,10 @@ let topBtn = document.querySelector('button');
 
 // nav items
 let navItems = document.querySelectorAll("nav a");
-    console.log(navItems);
+    // console.log(navItems);
 navItems.forEach((nav, i) => {
-    nav.innerHTML = siteContent.nav[`nav-item-${i + 1}`];
-    });
+    nav.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+    })
 
 // nav style
 navItems.forEach((nav, i) => {
@@ -72,10 +72,14 @@ navItems.forEach((nav, i) => {
 });
 
 // 2 new nav items
-// let newNavItems = document.createElement('nav a');
-//   newNavItems.innerHTML = 'Hi';
-//   document.body.prepend(newNavItems);
-
+navItems = document.getElementsByTagName('a')[0];
+let createNav = (nav) => {
+  let newNav = document.createElement('a');
+  newNav.textContent = nav;
+  return newNav;
+}
+  navItems.prepend(createNav('Hi'));
+  navItems.append(createNav('Bye'));
 
 
 // main content p's
